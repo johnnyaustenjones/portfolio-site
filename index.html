@@ -34,6 +34,11 @@
     nav a:hover {
       color: white;
     }
+    nav a.active {
+  color: white;
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
+}
     .branding {
       position: absolute;
       top: 2em;
@@ -126,11 +131,10 @@
 <body>
   <header>
     <nav>
-      <a href="#">Film</a>
-      <a href="#">Photography</a>
-      <a href="about.html">About</a>
-      <a href="#">Contact</a>
-    </nav>
+  <a href="index.html" class="active">Work</a>
+  <a href="about.html">About</a>
+  <a href="#contact">Contact</a>
+</nav>
     <div class="branding">Johnny Austen-Jones</div>
     <h1>Work</h1>
   </header>
@@ -173,7 +177,7 @@
   <footer>
     <p>&copy; 2025 Johnny Austen-Jones</p>
   
-  <section style="background:#1f1f1f; padding:2em; text-align:center;">
+  <section id="contact" style="background:#1f1f1f; padding:2em; text-align:center;">
     <h2 style="margin-bottom:0.5em;">Contact</h2>
     <p>Get in touch for freelance projects, collaborations, or just to say hi:</p>
     <p>
