@@ -33,12 +33,24 @@
       margin-bottom: 0.5em;
     }
 
-    .hero-image {
-      width: 100%;
-      max-width: 700px;
-      margin-bottom: 2em;
-      border-radius: 6px;
-    }
+    .video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  padding-bottom: 39.37%;
+  height: 0;
+  overflow: hidden;
+  background: black;
+  margin-bottom: 2em;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
     .back {
       margin-top: 2em;
@@ -57,11 +69,13 @@
       Narrative Short | Director of Photography
     </p>
 
-    <img 
-      src="vogelkop1.PNG" 
-      alt="Vogelkop"
-      class="hero-image"
-    >
+   <div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/OBMVSNYuJ9s"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
 
     <p style="line-height:1.7;">
       A short film about a lonely man who finds solace in a bird-mating program.
