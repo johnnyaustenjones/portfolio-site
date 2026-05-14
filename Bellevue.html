@@ -95,23 +95,20 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
       margin-top: 2em;
+      overflow: hidden;
     }
 
-.stills-grid img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-
-  /* push image down slightly so top black bar gets cropped out */
-  object-position: center 48%;
-
-  display: block;
-  border-radius: 4px;
-  background: #000;
-
-  /* zoom in slightly to crop bars harder */
-  transform: scale(1.06);
-}
+    .stills-grid img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: center 48%;
+      display: block;
+      border-radius: 4px;
+      background: #000;
+      transform: scale(1.06);
+      transform-origin: center;
+    }
 
     .credits {
       margin-top: 3em;
