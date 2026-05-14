@@ -10,10 +10,51 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 2em;
       background: #121212;
       color: #eaeaea;
     }
+
+    /* TOP NAV */
+
+    header {
+      background: #1f1f1f;
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      position: absolute;
+      top: 2em;
+      left: 2em;
+    }
+
+    nav a {
+      margin-right: 1em;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    nav a.active {
+      color: white;
+      border-bottom: 2px solid white;
+      padding-bottom: 4px;
+    }
+
+    .branding {
+      position: absolute;
+      top: 2em;
+      right: 2em;
+      font-weight: bold;
+    }
+
+    /* PAGE CONTENT */
 
     a {
       color: #ccc;
@@ -27,6 +68,7 @@
     .container {
       max-width: 800px;
       margin: auto;
+      padding: 2em;
     }
 
     h1 {
@@ -34,23 +76,23 @@
     }
 
     .video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  padding-bottom: 39.37%;
-  height: 0;
-  overflow: hidden;
-  background: black;
-  margin-bottom: 2em;
-}
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      padding-bottom: 39.37%;
+      height: 0;
+      overflow: hidden;
+      background: black;
+      margin-bottom: 2em;
+    }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     .back {
       margin-top: 2em;
@@ -61,6 +103,17 @@
 </head>
 
 <body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="active">Work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="branding">Johnny Austen-Jones</div>
+  </header>
+
   <div class="container">
 
     <h1>Vogelkop (2025)</h1>
@@ -69,13 +122,13 @@
       Narrative Short | Director of Photography
     </p>
 
-   <div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/OBMVSNYuJ9s"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-</div>
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/OBMVSNYuJ9s"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
 
     <p style="line-height:1.7;">
       A short film about a lonely man who finds solace in a bird-mating program.
@@ -89,5 +142,6 @@
     <a href="index.html" class="back">← Back to Home</a>
 
   </div>
+
 </body>
 </html>
