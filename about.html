@@ -1,93 +1,142 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <header>
-  <nav>
-    <a href="index.html">Work</a>
-    <a href="about.html" class="active">About</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-
-  <div class="branding">Johnny Austen-Jones</div>
-  <h1>About</h1>
-</header>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Johnny Austen-Jones</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    .cv-button {
-  display: inline-block;
-  margin-top: 2em;
-  padding: 12px 24px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
 
-.cv-button:hover {
-  background: white;
-  color: black;
-}
+  <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 2em;
       background: #121212;
       color: #eaeaea;
     }
+
+    header {
+      background: #1f1f1f;
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      position: absolute;
+      top: 2em;
+      left: 2em;
+    }
+
+    nav a {
+      margin-right: 1em;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    nav a.active {
+      color: white;
+      border-bottom: 2px solid white;
+      padding-bottom: 4px;
+    }
+
+    .branding {
+      position: absolute;
+      top: 2em;
+      right: 2em;
+      font-weight: bold;
+    }
+
     .container {
       max-width: 800px;
       margin: auto;
+      padding: 2em;
     }
+
     h1 {
       color: white;
     }
+
     p {
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #ddd;
     }
-    .btn {
-      background: #333;
-      color: white;
-      padding: 0.6em 1.2em;
+
+    a {
+      color: #ccc;
       text-decoration: none;
-      border-radius: 6px;
-      display: inline-block;
-      margin-top: 1em;
     }
-    a.back {
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cv-button {
       display: inline-block;
       margin-top: 2em;
-      color: #ccc;
-      font-size: 0.9em;
+      padding: 12px 24px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
     }
-    a.back:hover {
-      text-decoration: underline;
+
+    .cv-button:hover {
+      background: white;
+      color: black;
+      text-decoration: none;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 2em;
+      font-size: 0.9em;
     }
   </style>
 </head>
+
 <body>
+
+  <header>
+    <nav>
+      <a href="index.html">Work</a>
+      <a href="about.html" class="active">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="branding">Johnny Austen-Jones</div>
+  </header>
+
   <div class="container">
     <h1>About Me</h1>
+
     <p>
       I'm a South London-based filmmaker with a passion for telling relevant and politically charged stories. 
       I'm particularly interested in documentary filmmaking as a tool for progressive change. 
       I believe in the importance of community — in its resilience, diversity, and the challenges it faces — 
       and I aim to capture these realities with honesty and empathy.
     </p>
+
     <p>
       I'm a professional, organised communicator with solid experience on semi-professional sets. 
       I have hands-on knowledge across multiple areas of production and never shy away from getting stuck in wherever I'm needed.
     </p>
+
     <a href="johnny-austen-jones-cv.pdf" target="_blank" class="cv-button">
-  Download CV
-</a>
+      Download CV
+    </a>
+
     <br />
+
     <a href="index.html" class="back">← Back to Home</a>
   </div>
+
 </body>
 </html>
