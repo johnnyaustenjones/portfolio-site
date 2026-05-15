@@ -7,6 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -14,12 +19,15 @@
       color: #eaeaea;
     }
 
+    /* TOP NAV */
+
     header, footer {
       background: #1f1f1f;
       color: white;
       padding: 2em 1em;
       text-align: center;
       position: relative;
+      z-index: 5;
     }
 
     nav {
@@ -52,29 +60,34 @@
       font-weight: bold;
     }
 
-    /* HERO SECTION */
+    /* HERO */
 
     .hero {
       min-height: 75vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       background: #181818;
-      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 0;
+    }
+
+    .hero-content {
+      transition: opacity 0.5s ease;
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 8vw, 7rem);
+      font-size: clamp(2rem, 5vw, 4rem);
       margin: 0;
       color: #d8d8d8;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
     }
 
     .hero p {
-      font-size: clamp(1.5rem, 3vw, 3rem);
-      margin-top: 0.2em;
+      font-size: clamp(1rem, 2vw, 1.6rem);
+      margin-top: 0.25em;
       color: #888;
       letter-spacing: 0.08em;
     }
@@ -82,15 +95,25 @@
     .scroll-arrow {
       position: absolute;
       bottom: 1.2em;
-      font-size: 4em;
+      font-size: 3em;
       color: #999;
       text-decoration: none;
-      transition: 0.3s ease;
+      transition: opacity 0.4s ease;
     }
 
-    .scroll-arrow:hover {
-      color: white;
-      transform: translateY(6px);
+    .hero.fade-out .hero-content,
+    .hero.fade-out .scroll-arrow {
+      opacity: 0;
+    }
+
+    /* CONTENT COMES OVER HERO */
+
+    .showreel,
+    .gallery,
+    footer {
+      position: relative;
+      z-index: 2;
+      background: #121212;
     }
 
     /* SHOWREEL */
@@ -129,7 +152,7 @@
       margin-top: 1em;
     }
 
-    /* PROJECT GRID */
+    /* PROJECTS */
 
     .gallery {
       display: grid;
@@ -198,11 +221,15 @@
 
   <!-- HERO -->
 
-  <section class="hero">
-    <h1>JOHNNY AUSTEN-JONES</h1>
-    <p>PORTFOLIO</p>
+  <section class="hero" id="hero">
+
+    <div class="hero-content">
+      <h1>JOHNNY AUSTEN-JONES</h1>
+      <p>PORTFOLIO</p>
+    </div>
 
     <a href="#work" class="scroll-arrow">⌄</a>
+
   </section>
 
   <!-- SHOWREEL -->
@@ -260,7 +287,7 @@
 
   <footer>
 
-    <section id="contact" style="padding:2em; text-align:center;">
+    <section id="contact">
 
       <h2>Contact</h2>
 
@@ -277,7 +304,7 @@
       <p>
         <a href="https://www.instagram.com/johnnyaustenjones" target="_blank">
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
             width="40">
         </a>
       </p>
@@ -285,6 +312,20 @@
     </section>
 
   </footer>
+
+  <!-- FADE SCRIPT -->
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const hero = document.getElementById('hero');
+
+      if (window.scrollY > 100) {
+        hero.classList.add('fade-out');
+      } else {
+        hero.classList.remove('fade-out');
+      }
+    });
+  </script>
 
 </body>
 </html>
