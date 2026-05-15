@@ -62,49 +62,49 @@
 
     /* HERO */
 
-    .hero {
-      min-height: 75vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: #181818;
-      position: sticky;
-      top: 0;
-      z-index: 0;
-    }
+.hero {
+  height: 42vh;
+  min-height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #181818;
+  position: relative;
+  z-index: 1;
+}
 
-    .hero-content {
-      transition: opacity 0.5s ease;
-    }
+.hero-content {
+  transition: opacity 0.5s ease;
+}
 
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 4rem);
-      margin: 0;
-      color: #d8d8d8;
-      letter-spacing: 0.04em;
-    }
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  margin: 0;
+  color: #d8d8d8;
+  letter-spacing: 0.04em;
+}
 
-    .hero p {
-      font-size: clamp(1rem, 2vw, 1.6rem);
-      margin-top: 0.25em;
-      color: #888;
-      letter-spacing: 0.08em;
-    }
+.hero p {
+  font-size: clamp(0.9rem, 1.6vw, 1.3rem);
+  margin-top: 0.35em;
+  color: #888;
+  letter-spacing: 0.08em;
+}
 
-    .scroll-arrow {
-      position: absolute;
-      bottom: 1.2em;
-      font-size: 3em;
-      color: #999;
-      text-decoration: none;
-      transition: opacity 0.4s ease;
-    }
+.scroll-arrow {
+  position: absolute;
+  bottom: 1em;
+  font-size: 2.5em;
+  color: #999;
+  text-decoration: none;
+  transition: opacity 0.4s ease;
+}
 
-    .hero.fade-out .hero-content,
-    .hero.fade-out .scroll-arrow {
-      opacity: 0;
-    }
+.hero.fade-out .hero-content,
+.hero.fade-out .scroll-arrow {
+  opacity: 0;
+}
 
     /* CONTENT COMES OVER HERO */
 
